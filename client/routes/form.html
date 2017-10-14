@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <title>Form</title>
+    <link rel="stylesheet" href="../css/form.css">
+</head>
+
+<body>
+    <div id="contact-form">
+        <form method="post" action="/api/submit">
+            <div>
+                <label for="custname">
+                  <span class="required">Customer Name: </span> 
+                  <br>
+                  <br>
+		      	<input type="text" id="custname" name="cname" value="" placeholder="Your Name" required="required" tabindex="1" autofocus="autofocus" />
+		      </label>
+            </div>
+            <div>
+                <label for="proname">
+                  <span class="required">Product Name: </span>
+                  <br> 
+                  <br>
+				  <input type="text" id="proname" name="pname" value="" placeholder="Product Name" required="required" tabindex="2" autofocus="autofocus" />
+			  </label>
+            </div>
+
+            <div>
+                <label for="ptype">
+              <span class="required">Product Type: </span>
+              <br>
+              <br>
+			      <select id="protype" name="ptype" tabindex="3">   
+			         <option value="jewellery">Jewellery</option>
+			         <option value="electronics">Electronics</option>  
+				   <option value="vehicles">Vehicles</option>
+				   <option value="historic">Historic Items</option>
+			      </select>
+		      </label>
+            </div>
+            <div>
+                <label for="type">
+                  <span class="required">Type: </span>
+                  <br> 
+                  <br>
+				  <input type="text" id="type" name="ttype" value="" placeholder="Sell or Mortgage" required="required" tabindex="2" autofocus="autofocus" />
+			  </label>
+            </div>
+
+            <div>
+                <label for="proof">
+                    <span class="required">Proof: </span> 
+                    <br>
+                    <br>
+				    <input type="text" id="proof" name="pproof" value="" placeholder="Proof" required="required" tabindex="4" autofocus="autofocus" />
+			    </label>
+            </div>
+            <div class="custom_file_upload">
+                <div class="file_upload">
+                    <span class="required">Image: </span>
+                    <br>
+                    <br>
+                    <input type="file" id="file_upload" name="file_upload">
+                </div>
+            </div>
+            <div>
+                <label for="message">
+                  <span class="required">Product Description: </span> 
+                  <br>
+                  <br>
+		      	<textarea id="message" name="message" placeholder="Some info about product....." tabindex="5" required="required"></textarea> 
+		      </label>
+            </div>
+            <div>
+                <button name="submit" type="submit" id="submit">SUBMIT</button>
+            </div>
+
+        </form>
+        <div>
+            <button>
+                <a style="text-decoration:none;color:white" href="/check/login" id="back"><strong>BACK</strong>
+                </button>
+        </div>
+
+    </div>
+</body>
+
+</html>

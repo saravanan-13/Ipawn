@@ -1,0 +1,220 @@
+<html>
+
+<head>
+    <title>
+        Profile
+    </title>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/atm.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <form class="well form-horizontal" action="/api/enter" method="post" id="contact_form">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend id="head" style="align:center;"><strong>Your Profile !</strong></legend>
+                <a href="/check/login" class="btn btn-warning">Back <span class="glyphicon glyphicon-send"></span></a>
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">First Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="first_name" placeholder="First Name" class="form-control" type="text" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Last Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="last_name" placeholder="Last Name" class="form-control" type="text" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">E-Mail</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input name="email" placeholder="E-Mail Address" class="form-control" type="text" required>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Phone #</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                            <input name="phone" placeholder="(845)555-1212" class="form-control" type="text" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Address</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input name="address" placeholder="Address" class="form-control" type="text" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">City</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input name="city" placeholder="city" class="form-control" type="text" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Zip Code</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input name="zip" placeholder="Zip Code" class="form-control" type="text" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-container" id="flip-toggle">
+
+                    <div class="flipper">
+                        <div class="card front">
+
+                            <div class="card-provider">
+                                <div class="visa c-image">
+                                    <img src="https://i.imgur.com/NN9t7UH.png" alt="visa">
+                                </div>
+
+                                <div class="mastercard c-image">
+                                    <img src="https://i.imgur.com/bma7TBS.png" alt="mastercard">
+                                </div>
+                            </div>
+
+                            <div class="card-number-wrap">
+                                <label class="input-title" for="c-number">
+                                            Card Number*
+                                          </label>
+                                <input type="text" name="cnumber" id="c-number" class="input-field card-number" placeholder="XXXX XXXX XXXX XXXX" maxlength="16" required>
+                            </div>
+
+                            <div class="cardholder-name-wrap">
+                                <label for="c-name" class="input-title cardholder-name">
+                                            Name on card*
+                                          </label>
+                                <input type="text" name="cname" id="c-name" class="input-field cardholder-name" placeholder="John Doe" required>
+                            </div>
+
+                            <div class="card-expiry-wrap">
+
+                                <label class="input-title">Expiry Date*</label>
+                                <div class="custom-dropdown">
+                                    <select name="month" class="input-field options">
+                                              <option>01</option>
+                                              <option>02</option>
+                                              <option>03</option>
+                                              <option>04</option>
+                                              <option>05</option>
+                                              <option>06</option>
+                                              <option>07</option>
+                                              <option>08</option>
+                                              <option>09</option>
+                                              <option>10</option>
+                                              <option>11</option>
+                                              <option>12</option>
+                                            </select>
+                                    <img src="http://imgh.us/dropdown_3.svg" alt="dropdown icon" class="select-icon">
+                                </div>
+
+                                <div class="custom-dropdown">
+                                    <select name="year" class="input-field options">
+                                              <option>15</option>
+                                              <option>16</option>
+                                              <option>17</option>
+                                              <option>18</option>
+                                              <option>19</option>
+                                              <option>20</option>
+                                              <option>21</option>
+                                              <option>22</option>
+                                              <option>23</option>
+                                              <option>24</option>
+                                              <option>24</option>
+                                              <option>25</option>
+                                            </select>
+                                    <img src="http://imgh.us/dropdown_3.svg" alt="dropdown icon" class="select-icon">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="card back">
+                            <!-- back content -->
+                            <div class="black-stripe"></div>
+                            <div class="cvv-wrap">
+                                <label for="cvv-code" class="input-title">CVV Code*</label>
+                                <input type="text" name="cvv" class="input-field cvv-code" id="cvv-code" placeholder="000" maxlength="3" required>
+                            </div>
+                            <div class="disclaimer">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                <br/> *Champs obligatoires
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="buttons">
+                    <button class="prev" disabled="disabled">Prev</button>
+                    <button class="next">Next</button>
+                </div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-4" id="sub">
+                        <button type="submit" class="btn btn-warning">Submit <span class="glyphicon glyphicon-send"></span></button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+
+    </div>
+    <!-- /.container -->
+    <script src="../js/profile.js"></script>
+    <script src="../js/atm.js"></script>
+</body>
+
+</html>
